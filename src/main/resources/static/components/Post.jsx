@@ -109,29 +109,29 @@ export const POST = () => {
             let closingTime = new Date();
 
             let openingSplit = openingHours.split(':');
+            let closingSplit = closingHours.split(':');
+
+            let openingTimeFormat = new Intl.DateTimeFormat('en-US', {
+                hour: 'numeric',
+                minute: 'numeric',
+                hour12: false
+            });
+            let closingTimeFormat = new Intl.DateTimeFormat('en-US', {
+                hour: 'numeric',
+                minute: 'numeric',
+                hour12: false
+            });
+
             openingTime.setHours(openingSplit[0]);
             openingTime.setMinutes(openingSplit[1]);
-
-            if(openingSplit.length === 3) {
-                openingTime.setSeconds(openingSplit[2]);
-            } else {
-                openingTime.setSeconds(0);
-            }
-
-            let closingSplit = closingHours.split(':');
             closingTime.setHours(closingSplit[0]);
             closingTime.setMinutes(closingSplit[1]);
 
-            if(closingSplit.length === 3) {
-                closingTime.setSeconds(closingSplit[2]);
-            } else {
-                closingTime.setSeconds(0)
-            }
-
             data = {
+                hoursId: formData.id,
                 dayOfWeek: formData.day,
-                openingHours: openingTime.toLocaleTimeString().replace("AM", "").replace("PM", "").trim(),
-                closingHours: closingTime.toLocaleTimeString().replace("AM", "").replace("PM", "").trim()
+                openingHours: openingTimeFormat.format(openingTime)+":00",
+                closingHours: closingTimeFormat.format(closingTime)+":00"
             };
         } else if(type === "holidays") {
             data = {
