@@ -1,0 +1,22 @@
+<configuration>
+  <!-- Use the Classic logger which logs to the console by default -->
+  <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <appender name="file" class="ch.qos.logback.core.FileAppender">
+    <!-- Set the file name -->
+    <file>debug.log</file>
+    <!-- Set the encoder -->
+    <encoder>
+      <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <root level="debug">
+    <appender-ref ref="console" />
+    <appender-ref ref="file" />
+  </root>
+</configuration>
