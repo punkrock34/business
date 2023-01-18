@@ -26,7 +26,7 @@
 
 ### Step 3: Update the credentials in the application.properties, everything should work just fine
 
-### Step 4: Open terminal and run these commands
+### Step 4: Open a terminal and go to the business directory after that run these commands
 
 ``npm install && npx webpack``
 
@@ -47,7 +47,7 @@
 * Required params are: ``businessName|type=string`` and ``businessEmail|type=string``
 * Response Type: JSON
 * Response Example: ``{"businessId":1,"businessName":"business1","businessEmail":"business1@gmail.com","businessPhone":"0000","latitude":41.0,"longitude":51.0}``
-* Response Types: STRING, STRING, STRING, DOUBLE
+* Response Types: STRING, STRING, STRING, DOUBLE, DOUBLE
 
 ### http://localhost:8080/api/v1/business/schedules
 
@@ -63,4 +63,26 @@
 * Response Example: ``[{"holidaysId":1,"calendarHolidayStart":"2023-01-01","calendarHolidayEnd":"2023-01-07"}]``
 * Response Types: INT, STRING, STRING
 
----
+
+### POST
+
+#### http://localhost:8080/api/v1/business/main
+
+* Required params are: ``businessName|type=string`` and ``businessEmail|type=string``
+* Requested body: ``{"businessName":"business1","businessEmail":"business1@gmail.com","businessPhone":"0000","latitude":41.0,"longitude":51.0}``
+* Response Type: None on sucess, error on invalid
+* Response Types: STRING, STRING, STRING, DOUBLE, DOUBLE
+
+### http://localhost:8080/api/v1/business/schedules
+
+* Required params are: ``businessName|type=string`` and ``businessEmail|type=string``
+* Requested body: `{"dayOfWeek":0,"openingHours":"10:00:00","closingHours":"19:00:00"}`
+* Response Type: None on sucess, error on invalid
+* Response Types: STRING, STRING, STRING
+
+### http://localhost:8080/api/v1/business/holidays
+
+* Required params are: ``businessName|type=string`` and ``businessEmail|type=string``
+* Required body: `{"calendarHolidayStart":"2023-01-01","calendarHolidayEnd":"2023-01-07"}`
+* Response Type: None on sucess, error on invalid
+* Response Types: STRING, STRING

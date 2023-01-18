@@ -1,5 +1,6 @@
-src/main/resources/node_modules/
-src/main/resources/package-lock.json
+node_modules
+package-lock.json
+src\main\resources\static\bundles\index.jsx
 HELP.md
 target/
 !.mvn/wrapper/maven-wrapper.jar
