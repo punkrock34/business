@@ -28,7 +28,9 @@
 
 ### Step 4: Open a terminal and go to the business directory after that run these commands
 
-``npm install && npx webpack``
+``npm install  
+  npx webpack``
+
 
 ---
 
@@ -36,9 +38,9 @@
 
 ---
 
-#### This application has two controllers a @RestController and a @Controller, to get started you can visit the localhost:8080 and you will be redirected to the thymeleaf templates where you can interact with the application in the enviorment I built.
+#### This application has two controllers a @RestController and a @Controller, to get started you can visit the localhost:8080, and you will be redirected to the thymeleaf templates where you can interact with the application in the environment I built.
 
-#### If you wish to control the api using postman or maybe you wish to create your own interface the endpoints are:
+#### If you wish to control the api using postman, or maybe you wish to create your own interface the endpoints are:
 
 ## GET
 
@@ -70,19 +72,19 @@
 
 * Required params are: ``businessName|type=string`` and ``businessEmail|type=string``
 * Requested body: ``{"businessName":"business1","businessEmail":"business1@gmail.com","businessPhone":"0000","latitude":41.0,"longitude":51.0}``
-* Response Type: None on sucess, error on invalid
+* Response Type: None on success, error on invalid
 * Response Types: STRING, STRING, STRING, DOUBLE, DOUBLE
 
 ### http://localhost:8080/api/v1/business/schedules
 
 * Required params are: ``businessName|type=string`` and ``businessEmail|type=string``
 * Requested body: `{"dayOfWeek":0,"openingHours":"10:00:00","closingHours":"19:00:00"}`
-* Response Type: None on sucess, error on invalid
+* Response Type: None on success, error on invalid
 * Response Types: STRING, STRING, STRING
 
 ### http://localhost:8080/api/v1/business/holidays
 
 * Required params are: ``businessName|type=string`` and ``businessEmail|type=string``
 * Required body: `{"calendarHolidayStart":"2023-01-01","calendarHolidayEnd":"2023-01-07"}`
-* Response Type: None on sucess, error on invalid
+* Response Type: None on success, error on invalid
 * Response Types: STRING, STRING
