@@ -16,7 +16,7 @@ COPY --from=react-build /app/src/main/resources/static/bundles /app/src/main/res
 RUN mvn clean install
 
 # final image
-FROM openjdk:17
+FROM openjdk:22-ea-10-jdk-slim
 WORKDIR /app
 COPY --from=spring-build /app/target/*.jar /app/app.jar
 EXPOSE 8080
