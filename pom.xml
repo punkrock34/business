@@ -42,7 +42,7 @@
 		<dependency>
 		    <groupId>org.springframework.boot</groupId>
 		    <artifactId>spring-boot-starter-thymeleaf</artifactId>
-		    <version>3.0.1</version>
+		    <version>3.0.7</version>
 		</dependency>
 
 		<dependency>
@@ -53,7 +53,7 @@
 		<dependency>
     		<groupId>org.springframework.data</groupId>
     		<artifactId>spring-data-jpa</artifactId>
-    		<version>3.0.0</version>
+    		<version>3.0.5</version>
 		</dependency>
 
 		<dependency>
