@@ -54,7 +54,7 @@ export const PUT = () => {
             longitude: '',
         })
 
-        const url = window.location.href + `/api/v1/business/${formData.type}`
+        const url = window.location.protocol + "//" + window.location.host + `/api/v1/business/${formData.type}`
         const type = formData.type
         let data = {};
 
@@ -135,7 +135,7 @@ export const PUT = () => {
     const handleSubmit = (event) => {
 
         event.preventDefault();
-        const url = window.location.href + `/api/v1/business/main`;
+        const url = window.location.protocol + "//" + window.location.host + `/api/v1/business/main`;
 
         resetResults();
 
@@ -156,7 +156,7 @@ export const PUT = () => {
     }
 
     const fetchDataForBusiness = (businessEmail, businessName, type) => {
-        const url = window.location.href + `/api/v1/business/${type}`;
+        const url = window.location.protocol + "//" + window.location.host + `/api/v1/business/${type}`;
 
         axios.request({
                 method: 'get',

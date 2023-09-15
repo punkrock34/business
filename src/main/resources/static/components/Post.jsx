@@ -22,7 +22,7 @@ export const POST = () => {
 
         event.preventDefault();
 
-        const url = window.location.href + `/api/v1/business/main`;
+        const url = window.location.protocol + "//" + window.location.host + `/api/v1/business/main`;
 
         resetResults();
 
@@ -44,7 +44,7 @@ export const POST = () => {
 
 
     const fetchDataForBusiness = (businessEmail, businessName, type) => {
-        const url = window.location.href + `/api/v1/business/${type}`;
+        const url = window.location.protocol + "//" + window.location.host + `/api/v1/business/${type}`;
 
         axios.request({
                 method: 'get',
@@ -98,7 +98,7 @@ export const POST = () => {
     };
 
     const handleSave = (type) => {
-        const url = window.location.href + `/api/v1/business/${type}`;
+        const url = window.location.protocol + "//" + window.location.host + `/api/v1/business/${type}`;
         let data = {};
         if (type === "schedules") {
 
