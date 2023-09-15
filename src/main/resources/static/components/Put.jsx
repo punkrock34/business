@@ -54,7 +54,7 @@ export const PUT = () => {
             longitude: '',
         })
 
-        const url = `http://localhost:8080/api/v1/business/${formData.type}`
+        const url = window.location.href + `/api/v1/business/${formData.type}`;
         const type = formData.type
         let data = {};
 

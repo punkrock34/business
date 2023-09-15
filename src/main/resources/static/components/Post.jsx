@@ -22,7 +22,7 @@ export const POST = () => {
 
         event.preventDefault();
 
-        const url = `http://localhost:8080/api/v1/business/main`;
+        const url = window.location.href + `/api/v1/business/${formData.type}`;
 
         resetResults();
 
