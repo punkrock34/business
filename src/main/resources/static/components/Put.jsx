@@ -135,8 +135,7 @@ export const PUT = () => {
     const handleSubmit = (event) => {
 
         event.preventDefault();
-
-        const url = `http://localhost:8080/api/v1/business/main`;
+        const url = window.location.href + `/api/v1/business/main`;
 
         resetResults();
 
@@ -157,7 +156,7 @@ export const PUT = () => {
     }
 
     const fetchDataForBusiness = (businessEmail, businessName, type) => {
-        const url = `http://localhost:8080/api/v1/business/${type}`;
+        const url = window.location.href + `/api/v1/business/${type}`;
 
         axios.request({
                 method: 'get',

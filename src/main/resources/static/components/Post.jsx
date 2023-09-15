@@ -44,7 +44,7 @@ export const POST = () => {
 
 
     const fetchDataForBusiness = (businessEmail, businessName, type) => {
-        const url = `http://localhost:8080/api/v1/business/${type}`;
+        const url = window.location.href + `/api/v1/business/${type}`;
 
         axios.request({
                 method: 'get',
@@ -98,7 +98,7 @@ export const POST = () => {
     };
 
     const handleSave = (type) => {
-        const url = `http://localhost:8080/api/v1/business/${type}`;
+        const url = window.location.href + `/api/v1/business/${type}`;
         let data = {};
         if (type === "schedules") {
 
