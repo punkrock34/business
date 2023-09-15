@@ -24,7 +24,7 @@ import com.business.api.services.BusinessPutService;
 
 @RestController
 @RequestMapping(path = "/api/v1/business")
-public class RestfullBusinessController {
+public class RestfulBusinessController {
 
     private final BusinessGetService businessGetService;
     private final BusinessPostService businessPostService;
@@ -32,7 +32,7 @@ public class RestfullBusinessController {
     private final BusinessDeleteService businessDeleteService;
 
     @Autowired
-    public RestfullBusinessController(BusinessGetService businessGetService, BusinessPostService businessPostService, BusinessPutService businessPutService, BusinessDeleteService businessDeleteService) {
+    public RestfulBusinessController(BusinessGetService businessGetService, BusinessPostService businessPostService, BusinessPutService businessPutService, BusinessDeleteService businessDeleteService) {
         this.businessGetService     = businessGetService;
         this.businessPostService    = businessPostService;
         this.businessPutService     = businessPutService;
