@@ -7,7 +7,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'src/main/resources/static/bundles/'),
-    filename: '[name].jsx'
+    filename: '[name].js'
   },
   module: {
     rules: [
