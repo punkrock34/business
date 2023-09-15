@@ -23,7 +23,7 @@ export const GET = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        const url = window.location.href + `/api/v1/business/${formData.type}`;
+        const url = window.location.href + `/api/v1/business/${type}`;
 
         resetResults();
 
